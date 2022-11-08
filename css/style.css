@@ -1,0 +1,761 @@
+@charset "UTF-8";
+/* line 2, ../WWW/pr_new2/sass/style.sass */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 1, ../WWW/pr_new2/sass/_general.sass */
+header {
+  position: relative;
+  height: 50px;
+}
+
+/* line 5, ../WWW/pr_new2/sass/_general.sass */
+nav {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: #212121;
+  z-index: 3;
+}
+
+/* line 12, ../WWW/pr_new2/sass/_general.sass */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 70px;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 18, ../WWW/pr_new2/sass/_general.sass */
+.menu_link {
+  font-size: 15px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+/* line 22, ../WWW/pr_new2/sass/_general.sass */
+.menu_link:hover {
+  text-decoration: none;
+  color: #1eacc7;
+}
+
+/* line 25, ../WWW/pr_new2/sass/_general.sass */
+.menu_item {
+  border-right: 2px dotted black;
+  padding-right: 28px;
+}
+
+/* line 28, ../WWW/pr_new2/sass/_general.sass */
+.menu_item:last-child {
+  border-right: none;
+}
+
+/* line 31, ../WWW/pr_new2/sass/_general.sass */
+.subheader {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  /*Для нормального отображения шапки с лого */
+  height: 84px;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* канал .6 делает прозрачной шапку, сами элементы на ней не трогает */
+}
+
+/* line 39, ../WWW/pr_new2/sass/_general.sass */
+.subheader-logo {
+  display: block;
+  /*Для того, чтобы наша ссылка получила отступ вниз. у строк не работают сверху отступы! */
+  max-width: 100%;
+  /* если в будущем картинка поменяется и станет больше для этого ставим */
+  margin-top: 16px;
+}
+
+/* line 45, ../WWW/pr_new2/sass/_general.sass */
+.subheader-oficial {
+  opacity: 0.5;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* line 51, ../WWW/pr_new2/sass/_general.sass */
+.subheader-call {
+  margin-top: 19px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+/* line 57, ../WWW/pr_new2/sass/_general.sass */
+.subheader-phone {
+  display: block;
+  margin-top: 8px;
+  line-height: 12px;
+  text-align: right;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* line 66, ../WWW/pr_new2/sass/_general.sass */
+.subheader-btn {
+  margin-top: 19px;
+  width: 172px;
+  height: 46px;
+  background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0px -3px 0 rgba(0, 0, 0, 0.12);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* line 2, ../WWW/pr_new2/sass/_mixins.sass */
+.subheader-btn:hover {
+  background-image: none;
+  background-color: #1eacc7;
+}
+
+/* line 81, ../WWW/pr_new2/sass/_general.sass */
+.promo {
+  min-height: 800px;
+  background: url("../img/background-promo.jpg") center center/cover no-repeat;
+  padding: 150px 0 135px 0;
+  /*??? */
+}
+
+/* line 86, ../WWW/pr_new2/sass/_general.sass */
+.promo-header {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  line-height: 60px;
+}
+
+/* line 94, ../WWW/pr_new2/sass/_general.sass */
+.promo-subheader {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 15px;
+  text-align: center;
+  margin: 0;
+  margin-top: 22px;
+}
+
+/* line 103, ../WWW/pr_new2/sass/_general.sass */
+.promo-descr {
+  margin-top: 23px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* line 110, ../WWW/pr_new2/sass/_general.sass */
+.promo-btn {
+  display: block;
+  /*Для того чтобы дать кнопке стать по центру дать ей марджины */
+  margin: 118px auto 0 auto;
+  width: 259px;
+  height: 63px;
+  background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+  color: #ffffff;
+}
+
+/* line 2, ../WWW/pr_new2/sass/_mixins.sass */
+.promo-btn:hover {
+  background-image: none;
+  background-color: #1eacc7;
+}
+
+/* line 127, ../WWW/pr_new2/sass/_general.sass */
+.reasons {
+  padding: 71px 0 65px 0;
+}
+
+/* line 129, ../WWW/pr_new2/sass/_general.sass */
+.reasons_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  height: 147px;
+}
+
+/* line 135, ../WWW/pr_new2/sass/_general.sass */
+.reasons_round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 26px;
+  width: 113px;
+  height: 113px;
+  background-color: #1eacc7;
+  border-radius: 100%;
+}
+
+/* line 144, ../WWW/pr_new2/sass/_general.sass */
+.reasons_descr {
+  text-align: justify;
+  width: 343px;
+}
+
+/* line 147, ../WWW/pr_new2/sass/_general.sass */
+.reasons_subtitle {
+  line-height: 21px;
+  color: #1eacc7;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+/* line 152, ../WWW/pr_new2/sass/_general.sass */
+.reasons_text {
+  color: #202020;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+/* line 158, ../WWW/pr_new2/sass/_general.sass */
+.label {
+  position: relative;
+  margin: 0 auto;
+  width: 107px;
+  padding: 5px 9px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 2;
+}
+
+/* line 170, ../WWW/pr_new2/sass/_general.sass */
+.label_white {
+  background-color: #fff;
+  color: #000;
+}
+
+/* line 173, ../WWW/pr_new2/sass/_general.sass */
+.label_min {
+  width: 76px;
+}
+
+/* line 176, ../WWW/pr_new2/sass/_general.sass */
+.subtitle {
+  position: relative;
+  margin-top: 19px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  color: #222222;
+  text-align: center;
+  z-index: 2;
+}
+
+/* line 185, ../WWW/pr_new2/sass/_general.sass */
+.subtitle_white {
+  color: #fff;
+  z-index: 2;
+}
+
+/* line 189, ../WWW/pr_new2/sass/_general.sass */
+.title {
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 38px;
+  color: #222222;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 2;
+}
+
+/* line 200, ../WWW/pr_new2/sass/_general.sass */
+.title_white {
+  color: #fff;
+}
+
+/* line 203, ../WWW/pr_new2/sass/_general.sass */
+.mobile {
+  min-height: 864px;
+  padding: 48px 0 79px 0;
+  background: url("../img/mobile_bg.png") center center/cover no-repeat;
+}
+
+/* line 207, ../WWW/pr_new2/sass/_general.sass */
+.mobile .row {
+  margin-top: 32px;
+}
+
+/* line 209, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item {
+  position: relative;
+  width: 320px;
+  height: 280px;
+  margin: 0 auto;
+  margin-bottom: 19px;
+  padding-top: 92px;
+}
+
+/* line 216, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_1 {
+  background: url("../img/ms1.jpg") center center/cover no-repeat;
+}
+
+/* line 218, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_2 {
+  background: url("../img/ms2.jpg") center center/cover no-repeat;
+}
+
+/* line 220, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_3 {
+  background: url("../img/ms3.jpg") center center/cover no-repeat;
+}
+
+/* line 222, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_4 {
+  background: url("../img/ms4.jpg") center center/cover no-repeat;
+}
+
+/* line 224, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_5 {
+  background: url("../img/ms5.jpg") center center/cover no-repeat;
+}
+
+/* line 226, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_6 {
+  background: url("../img/ms6.jpg") center center/cover no-repeat;
+}
+
+/* line 228, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_subtitle {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* line 235, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 26px;
+  height: 26px;
+  background-color: #000000;
+  margin: 0 auto;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+/* line 249, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_plus:before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #1eacc7;
+  transition: 0.3s all;
+}
+
+/* line 256, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_plus:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  width: 2px;
+  height: 14px;
+  background-color: #1eacc7;
+  transition: 0.3s all;
+}
+
+/* line 267, ../WWW/pr_new2/sass/_general.sass */
+.mobile_item_plus:hover:before, .mobile_item_plus:hover:after {
+  background-color: #ff5656;
+}
+
+/* line 270, ../WWW/pr_new2/sass/_general.sass */
+.choice {
+  position: relative;
+  min-height: 895px;
+  padding: 57px 0 138px 0;
+  background: url("../img/mobile_bg.png") center center/cover no-repeat;
+}
+
+/* line 275, ../WWW/pr_new2/sass/_general.sass */
+.choice_img {
+  position: relative;
+  display: block;
+  margin: 56px auto 0 auto;
+  z-index: 2;
+}
+
+/* line 280, ../WWW/pr_new2/sass/_general.sass */
+.choice_descr {
+  font-size: 17px;
+  font-weight: 400;
+  color: #222222;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* line 286, ../WWW/pr_new2/sass/_general.sass */
+.choice_black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 499px;
+  width: 100%;
+  background-color: #070716;
+  z-index: 1;
+}
+
+/* line 295, ../WWW/pr_new2/sass/_general.sass */
+.terms {
+  padding: 68px 0 84px 0;
+}
+
+/* line 297, ../WWW/pr_new2/sass/_general.sass */
+.terms_block {
+  margin: 33px 0;
+}
+
+/* line 299, ../WWW/pr_new2/sass/_general.sass */
+.terms_block_nmb {
+  margin-bottom: 0px;
+}
+
+/* line 301, ../WWW/pr_new2/sass/_general.sass */
+.terms_title {
+  font-size: 22px;
+  line-height: 1px;
+  font-weight: 400;
+  color: #1ca8c3;
+}
+
+/* line 306, ../WWW/pr_new2/sass/_general.sass */
+.terms_list {
+  list-style-type: none;
+  padding-left: 50px;
+  margin-top: 22px;
+}
+
+/* line 310, ../WWW/pr_new2/sass/_general.sass */
+.terms_list li {
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+  color: #222222;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+/* line 317, ../WWW/pr_new2/sass/_general.sass */
+.terms_list li:before {
+  position: absolute;
+  left: -32px;
+  top: 3px;
+  content: "";
+  display: block;
+  width: 21px;
+  height: 20px;
+  background: url(../icons/par.png) center center/cover no-repeat;
+}
+
+/* line 326, ../WWW/pr_new2/sass/_general.sass */
+.terms_descr {
+  font-size: 17px;
+  font-weight: 400;
+  color: #1ca8c3;
+}
+
+/* line 331, ../WWW/pr_new2/sass/_general.sass */
+.terms .warning .terms_title {
+  color: #ff5656;
+}
+
+/* line 335, ../WWW/pr_new2/sass/_general.sass */
+.terms .warning .terms_list li::before {
+  background: url(../icons/par_red.png) center center/cover no-repeat;
+}
+
+/* line 337, ../WWW/pr_new2/sass/_general.sass */
+.world_map {
+  position: relative;
+  min-height: 717px;
+  padding: 49px 0;
+  background: url(../img/map_bg.jpg) center center/cover no-repeat;
+}
+
+/* line 342, ../WWW/pr_new2/sass/_general.sass */
+.world_map_link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 49px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #1fbad6;
+}
+
+/* line 352, ../WWW/pr_new2/sass/_general.sass */
+.world_map_link:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 356, ../WWW/pr_new2/sass/_general.sass */
+footer {
+  padding: 14px 23px 39px 23px;
+}
+
+/* line 359, ../WWW/pr_new2/sass/_general.sass */
+footer a:hover {
+  text-decoration: none;
+}
+
+/* line 363, ../WWW/pr_new2/sass/_general.sass */
+.footer_divider {
+  width: 299px;
+  height: 4px;
+  background-color: #1fbad6;
+  margin: 0 auto;
+}
+
+/* line 368, ../WWW/pr_new2/sass/_general.sass */
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 32px;
+}
+
+/* line 373, ../WWW/pr_new2/sass/_general.sass */
+.footer_wrapper > div {
+  width: 33%;
+}
+
+/* line 375, ../WWW/pr_new2/sass/_general.sass */
+.footer_wrapper > div:nth-child(3) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* line 378, ../WWW/pr_new2/sass/_general.sass */
+.footer_social {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 382, ../WWW/pr_new2/sass/_general.sass */
+.footer_social_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4px;
+  width: 32px;
+  height: 32px;
+  background-color: #070716;
+  border-radius: 100%;
+}
+
+/* line 391, ../WWW/pr_new2/sass/_general.sass */
+.footer_social_item i {
+  color: #fff;
+}
+
+/* line 393, ../WWW/pr_new2/sass/_general.sass */
+.footer_links {
+  width: 390px;
+  margin: 0 auto;
+}
+
+/* line 396, ../WWW/pr_new2/sass/_general.sass */
+.footer_links_main {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+/* line 400, ../WWW/pr_new2/sass/_general.sass */
+.footer_links_main a {
+  color: #070716;
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* line 405, ../WWW/pr_new2/sass/_general.sass */
+.footer_links_sub {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* line 409, ../WWW/pr_new2/sass/_general.sass */
+.footer_links_sub a {
+  color: #999999;
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* line 414, ../WWW/pr_new2/sass/_general.sass */
+.footer_links_lang {
+  display: block;
+  margin: 0 auto;
+  color: #1fbad6;
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 19px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  /* line 3, ../WWW/pr_new2/sass/_media.sass */
+  .menu_item {
+    padding-right: 20px;
+  }
+  /* line 5, ../WWW/pr_new2/sass/_media.sass */
+  .menu_link {
+    font-size: 13px;
+  }
+  /* line 8, ../WWW/pr_new2/sass/_media.sass */
+  .promo-header {
+    font-size: 50px;
+  }
+  /* line 10, ../WWW/pr_new2/sass/_media.sass */
+  .promo-subheader {
+    font-size: 36px;
+    line-height: 39px;
+  }
+  /* line 14, ../WWW/pr_new2/sass/_media.sass */
+  .mobile_item {
+    width: 294px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* line 19, ../WWW/pr_new2/sass/_media.sass */
+  .menu_item {
+    padding-right: 8px;
+  }
+  /* line 21, ../WWW/pr_new2/sass/_media.sass */
+  .menu_link {
+    font-size: 10px;
+  }
+  /* line 25, ../WWW/pr_new2/sass/_media.sass */
+  .subheader-logo img {
+    width: 100%;
+  }
+  /* line 27, ../WWW/pr_new2/sass/_media.sass */
+  .subheader-oficial {
+    font-size: 11px;
+  }
+  /* line 29, ../WWW/pr_new2/sass/_media.sass */
+  .subheader-phone {
+    font-size: 18px;
+  }
+  /* line 31, ../WWW/pr_new2/sass/_media.sass */
+  .subheader-btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 21px;
+    font-size: 13px;
+  }
+  /* line 37, ../WWW/pr_new2/sass/_media.sass */
+  .promo-header {
+    font-size: 40px;
+  }
+  /* line 39, ../WWW/pr_new2/sass/_media.sass */
+  .promo-subheader {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  /* line 43, ../WWW/pr_new2/sass/_media.sass */
+  .reasons_block {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 21px;
+  }
+  /* line 48, ../WWW/pr_new2/sass/_media.sass */
+  .reasons_descr {
+    width: 300px;
+    margin-top: 20px;
+  }
+  /* line 51, ../WWW/pr_new2/sass/_media.sass */
+  .reasons .title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 55, ../WWW/pr_new2/sass/_media.sass */
+  .menu {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    padding: 20px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s all;
+  }
+  /* line 67, ../WWW/pr_new2/sass/_media.sass */
+  .menu_active {
+    left: 0;
+  }
+  /* line 69, ../WWW/pr_new2/sass/_media.sass */
+  .menu_item {
+    padding-right: 0;
+    border: none;
+    margin: 10px 0;
+  }
+  /* line 73, ../WWW/pr_new2/sass/_media.sass */
+  .menu_link {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
